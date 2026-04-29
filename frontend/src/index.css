@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body, #root {
+  background: #F9F9F9 !important; /* salt color */
+  color: #1a1a1a;
+  font-family: 'Sora', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: #0f0e0c; }
+::-webkit-scrollbar-thumb { background: #2e2a22; border-radius: 2px; }
+::selection { background: #2e1f16; color: #e8956e; }
