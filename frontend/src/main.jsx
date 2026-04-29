@@ -4,7 +4,9 @@ import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import './index.css';
 import { Toaster } from 'react-hot-toast';
+import api from './utils/api';
 
+api.get('/ping').catch(() => {}); // Warm up backend on app start
 ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <Toaster

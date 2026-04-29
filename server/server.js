@@ -41,6 +41,8 @@ app.use('/api/badges',    require('./routes/badges'));
 
 app.get('/', (req, res) => res.json({ status: 'RiseLog API running ✅' }));
 
+app.get('/api/ping', (req, res) => res.json({ ok: true }));
+
 app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).json({ message: err.message });
