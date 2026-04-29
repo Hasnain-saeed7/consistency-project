@@ -8,7 +8,10 @@ const app = express();
 
 app.use(helmet());
 app.use(cors({
-  origin: '*', // we'll restrict after both are deployed
+  origin: [
+    'http://localhost:5173',
+     'https://consistency-project-9x6k.vercel.app/' // local dev
+  ], // we'll restrict after both are deployed
   credentials: true,
 }));
 app.use(express.json());
